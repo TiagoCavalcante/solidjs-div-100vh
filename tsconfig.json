@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "declaration": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "noImplicitAny": true
+  },
+  "include": ["./index.tsx"],
+  "exclude": ["./lib", "./node_modules"]
+}
