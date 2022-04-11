@@ -6,7 +6,7 @@
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/TiagoCavalcante/solidjs-div-100vh#readme",
+  "homepage": "https://solidjs-div-100vh.vercel.app/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TiagoCavalcante/solidjs-div-100vh.git"
