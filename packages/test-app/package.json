@@ -1,0 +1,36 @@
+{
+  "name": "solidjs-div-100vh-example-app",
+  "description": "An example app of the project solidjs-div-100vh",
+  "info": "A SolidJS port of https://www.npmjs.com/package/react-div-100vh, useful for making a div with the same height as the screen in mobile devices, without it the 'full height (100vh)' may be bigger than what the user sees and then the div would have its bottom elements hidden.",
+  "version": "1.0.0",
+  "keywords": [
+    "solidhack",
+    "best_ecosystem"
+  ],
+  "contributors": [
+    {
+      "name": "Tiago Cavalcante Trindade",
+      "email": "tiagotrindade111@gmail.com",
+      "url": "https://github.com/TiagoCavalcante"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "solidjs-div-100vh": "^1.0.0"
+  },
+  "devDependencies": {
+    "solid-scripts": "^0.0.61"
+  },
+  "scripts": {
+    "start": "solid-scripts start",
+    "build": "solid-scripts build",
+    "test": "solid-scripts test"
+  },
+  "browserslist": [
+    "Chrome 74",
+    "Firefox 63",
+    "Safari 11",
+    "Edge 17",
+    "Node 10"
+  ]
+}

@@ -8,6 +8,6 @@
     "moduleResolution": "Node",
     "noImplicitAny": true
   },
-  "include": ["./index.tsx"],
+  "include": ["./src/index.tsx"],
   "exclude": ["./lib", "./node_modules"]
 }
