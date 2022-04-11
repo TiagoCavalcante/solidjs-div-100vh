@@ -131,27 +131,29 @@
           const e = s.cloneNode(!0),
             t = e.firstChild,
             r = (t.firstChild, t.nextSibling),
-            o = r.nextSibling,
-            c = o.firstChild,
-            l = o.nextSibling,
-            d = l.firstChild,
-            u = l.nextSibling
+            o = r.firstChild,
+            c = r.nextSibling,
+            l = c.firstChild,
+            d = c.nextSibling,
+            u = d.firstChild,
+            v = d.nextSibling
           return (
             e.style.setProperty("padding", "10px"),
             t.style.setProperty("margin-bottom", "10px"),
             Object(n.b)(t, y, null),
             r.style.setProperty("margin-bottom", "10px"),
-            (o.$$click = () => w("Div100vh")),
-            (l.$$click = () => w("regularDiv")),
-            u.style.setProperty("position", "absolute"),
-            u.style.setProperty("bottom", "10px"),
+            o.style.setProperty("width", "100%"),
+            (c.$$click = () => w("Div100vh")),
+            (d.$$click = () => w("regularDiv")),
+            v.style.setProperty("position", "absolute"),
+            v.style.setProperty("bottom", "10px"),
             Object(i.f)(
               (e) => {
                 const t = "Div100vh" === j(),
                   r = "regularDiv" === j()
                 return (
-                  t !== e._v$ && (c.checked = e._v$ = t),
-                  r !== e._v$2 && (d.checked = e._v$2 = r),
+                  t !== e._v$ && (l.checked = e._v$ = t),
+                  r !== e._v$2 && (u.checked = e._v$2 = r),
                   e
                 )
               },

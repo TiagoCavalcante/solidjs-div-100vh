@@ -13,7 +13,8 @@ function Children() {
         <input
           type="text"
           placeholder="What if you open your keyboard?"
-        ></input>
+          style={{ width: "100%" }}
+        />
       </div>
 
       <div onClick={() => setDivType("Div100vh")}>
