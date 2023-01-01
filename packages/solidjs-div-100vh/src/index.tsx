@@ -6,24 +6,17 @@ import {
   splitProps,
 } from "solid-js"
 
-let warned = false
-
 export default function Div100vh(
   props: JSX.HTMLAttributes<HTMLDivElement> & {
-    ref: JSX.Element
-    style: JSX.CSSProperties
+    ref?: JSX.Element
+    style?: Omit<JSX.CSSProperties, "height">
   },
 ): JSX.Element {
   const height = create100vh()
   const [, other] = splitProps(props, ["style"])
 
-  if (!warned && (props.style as any)?.height) {
-    warned = true
-    console.warn("<Div100vh /> overrides the height property of the style prop")
-  }
-
   const styleWithRealHeight = () => ({
-    ...(props.style as any),
+    ...(props.style ?? {}) as {},
     height: height() ? `${height()}px` : "100vh",
   })
 

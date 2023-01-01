@@ -1,11 +1,11 @@
-"use strict"
+'use strict';
 
-Object.defineProperty(exports, "__esModule", { value: true })
+Object.defineProperty(exports, '__esModule', { value: true });
 
-var web = require("solid-js/web")
-var solidJs = require("solid-js")
+var web = require('solid-js/web');
+var solidJs = require('solid-js');
 
-/*! *****************************************************************************
+/******************************************************************************
 Copyright (c) Microsoft Corporation.
 
 Permission to use, copy, modify, and/or distribute this software for any
@@ -20,83 +20,60 @@ OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 var __assign = function () {
-  __assign =
-    Object.assign ||
-    function __assign(t) {
-      for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i]
-
-        for (var p in s)
-          if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p]
-      }
-
-      return t
+  __assign = Object.assign || function __assign(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
     }
+    return t;
+  };
+  return __assign.apply(this, arguments);
+};
 
-  return __assign.apply(this, arguments)
-}
-
-const _tmpl$ = /*#__PURE__*/ web.template(`<div></div>`, 2)
-var warned = false
+const _tmpl$ = /*#__PURE__*/web.template(`<div></div>`, 2);
 function Div100vh(props) {
-  var _a
-
-  var height = create100vh()
-
-  var _b = solidJs.splitProps(props, ["style"]),
-    other = _b[1]
-
-  if (
-    !warned &&
-    ((_a = props.style) === null || _a === void 0 ? void 0 : _a.height)
-  ) {
-    warned = true
-    console.warn("<Div100vh /> overrides the height property of the style prop")
-  }
-
+  var height = create100vh();
+  var _a = solidJs.splitProps(props, ["style"]),
+    other = _a[1];
   var styleWithRealHeight = function () {
-    return __assign(__assign({}, props.style), {
-      height: height() ? "".concat(height(), "px") : "100vh",
-    })
-  }
-
+    var _a;
+    return __assign(__assign({}, (_a = props.style) !== null && _a !== void 0 ? _a : {}), {
+      height: height() ? "".concat(height(), "px") : "100vh"
+    });
+  };
   return (() => {
-    const _el$ = _tmpl$.cloneNode(true)
-
-    web.spread(_el$, other, false, false)
-
-    web.effect((_$p) => web.style(_el$, styleWithRealHeight(), _$p))
-
-    return _el$
-  })()
+    const _el$ = _tmpl$.cloneNode(true);
+    web.spread(_el$, web.mergeProps({
+      get style() {
+        return styleWithRealHeight();
+      }
+    }, other), false, false);
+    return _el$;
+  })();
 }
 function create100vh() {
   var _a = solidJs.createSignal(measureHeight()),
     height = _a[0],
-    setHeight = _a[1]
-
+    setHeight = _a[1];
   solidJs.createEffect(function () {
-    if (!isClient()) return
-
+    if (!isClient()) return;
     var setMeasuredHeight = function () {
-      return setHeight(measureHeight())
-    }
-
-    window.addEventListener("resize", setMeasuredHeight)
+      return setHeight(measureHeight());
+    };
+    window.addEventListener("resize", setMeasuredHeight);
     solidJs.onCleanup(function () {
-      return window.removeEventListener("resize", setMeasuredHeight)
-    })
-  }, [])
-  return height
+      return window.removeEventListener("resize", setMeasuredHeight);
+    });
+  }, []);
+  return height;
 }
 function measureHeight() {
-  return isClient() ? window.innerHeight : null
+  return isClient() ? window.innerHeight : null;
 }
-
 function isClient() {
-  return typeof window !== "undefined" && typeof document !== "undefined"
+  return typeof window !== "undefined" && typeof document !== "undefined";
 }
 
-exports.create100vh = create100vh
-exports["default"] = Div100vh
-exports.measureHeight = measureHeight
+exports.create100vh = create100vh;
+exports["default"] = Div100vh;
+exports.measureHeight = measureHeight;
