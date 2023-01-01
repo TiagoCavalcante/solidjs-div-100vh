@@ -1,11 +1,18 @@
 {
   "name": "solidjs-div-100vh",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A workaround for the '100vh' issue in mobile browsers",
   "info": "A SolidJS port of https://www.npmjs.com/package/react-div-100vh, useful for making a div with the same height as the screen in mobile devices, without it the 'full height (100vh)' may be bigger than what the user sees and then the div would have its bottom elements hidden.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "homepage": "https://solidjs-div-100vh.vercel.app/",
   "repository": {
     "type": "git",

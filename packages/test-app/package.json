@@ -2,7 +2,7 @@
   "name": "solidjs-div-100vh-example-app",
   "description": "An example app of the project solidjs-div-100vh",
   "info": "A SolidJS port of https://www.npmjs.com/package/react-div-100vh, useful for making a div with the same height as the screen in mobile devices, without it the 'full height (100vh)' may be bigger than what the user sees and then the div would have its bottom elements hidden.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://solidjs-div-100vh.vercel.app/",
   "keywords": [
     "solidhack",
@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "solidjs-div-100vh": "^1.0.0"
+    "solidjs-div-100vh": "^1.0.1"
   },
   "devDependencies": {
     "solid-scripts": "^0.0.61"
